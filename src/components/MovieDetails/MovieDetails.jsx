@@ -13,7 +13,6 @@ const MovieDetails = () => {
 
   const dispatch = useDispatch();
   const data = useSelector(getSelectedMovieOrShow);
-  console.log(data);
 
   useEffect(() => {
     dispatch(fetchAsyncMovieOrShowDetail(imbdID));
