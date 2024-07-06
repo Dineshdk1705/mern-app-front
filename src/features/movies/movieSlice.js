@@ -31,6 +31,7 @@ export const fetchAsyncMovieOrShowDetail = createAsyncThunk(
 );
 
 const initialState = {
+  status: "idle",
   movies: {},
   shows: {},
   selectedMovieOrShow: {},

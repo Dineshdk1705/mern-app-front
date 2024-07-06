@@ -6,9 +6,10 @@
   min-height: 450px;
   height: 100%;
   margin: 10px;
+  border-radius: 10px;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: all 0.3s;
   }
 }
@@ -19,6 +20,7 @@
   img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
   }
 }
 
@@ -28,7 +30,7 @@
 .card-info {
   color: $font-primary;
   h4 {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
   }

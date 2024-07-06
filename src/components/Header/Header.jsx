@@ -16,8 +16,6 @@ const Header = () => {
     if (searchText?.trim().length > 0) {
       dispatch(fetchAsyncMovies(searchText));
       dispatch(fetchAsyncShows(searchText));
-    } else {
-      alert("Please search any movie or show !");
     }
     setSearchText("");
   };
@@ -25,7 +23,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <NavLink to="/">Movie App</NavLink>
+        <NavLink to="/">Movie Palace</NavLink>
       </div>
       <div className="search-bar">
         <form onSubmit={handleSubmit}>

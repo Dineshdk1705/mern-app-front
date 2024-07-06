@@ -1,11 +1,70 @@
 @import '../../common/colors.scss';
 
 .footer {
-    background: $secondary-color;
-    height: 72px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $font-primary;
-    flex-direction: column;
+  position: relative;
+  padding: 2rem;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; // Add this for better responsive layout
+
+  a {
+    &:hover {
+      color: $font-secondary;
+    }
   }
+
+  .copyright {
+    color: $font-primary;
+    font-size: 14px;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 1000px;
+    width: 100%; // Ensure it takes full width on smaller screens
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    &__menus {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.5rem; // Adjust gap for better responsiveness
+      margin-top: -20px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem; // Adjust gap for smaller screens
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem; // Adjust gap for smaller screens
+      }
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+
+      &>*~* {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

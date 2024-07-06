@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import {
   fetchAsyncMovieOrShowDetail,
   getSelectedMovieOrShow,
@@ -23,6 +25,11 @@ const MovieDetails = () => {
 
   return (
     <div className="movie-section">
+      <div className="back-container">
+        <Link to="/" className="back-btn">
+          <IoMdArrowRoundBack />
+        </Link>
+      </div>
       {Object.keys(data).length === 0 ? (
         <div>Loading...</div>
       ) : (
