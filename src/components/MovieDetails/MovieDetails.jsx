@@ -9,6 +9,7 @@ import {
   removeSelectedMovieOrShow,
 } from "../../features/movies/movieSlice";
 import "./MovieDetails.scss";
+import no_poster from "../../images/poster.jpg";
 
 const MovieDetails = () => {
   const { imbdID } = useParams();
@@ -76,7 +77,10 @@ const MovieDetails = () => {
             </div>
           </div>
           <div className="section-right">
-            <img src={data.Poster} alt={data.Title} />
+            <img
+              src={data.Poster !== "N/A" ? data.Poster : no_poster}
+              alt={data.Title}
+            />
           </div>
         </>
       )}
