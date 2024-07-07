@@ -32,7 +32,7 @@ const MovieDetails = () => {
         </Link>
       </div>
       {Object.keys(data).length === 0 ? (
-        <div>Loading...</div>
+        <div className="loading">Loading...</div>
       ) : (
         <>
           <div className="section-left">
