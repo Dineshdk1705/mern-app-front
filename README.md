@@ -4,6 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `live demo`
+Link : (https://movie-palace-nu.vercel.app/)
+
 In the project directory, you can run:
 
 ### `npm start`
