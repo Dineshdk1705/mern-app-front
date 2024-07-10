@@ -33,7 +33,8 @@ const Login = () => {
     if (!email || !password) {
       return handleError("email and password are required");
     }
-    const url = `${process.env.DOMAIN_API_URL}/auth/login`;
+    const url = "https://mern-app-1-eta.vercel.app/auth/login";
+    console.log("url2 = ", url);
     try {
       const response = await fetch(url, {
         method: "POST",
