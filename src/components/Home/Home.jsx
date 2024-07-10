@@ -5,6 +5,8 @@ import {
   fetchAsyncMovies,
   fetchAsyncShows,
 } from "../../features/movies/movieSlice";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,8 +20,10 @@ const Home = () => {
 
   return (
     <div>
+      <Header />
       <div className="banner-image"></div>
       <MovieListing />
+      <Footer />
     </div>
   );
 };
