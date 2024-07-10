@@ -33,7 +33,7 @@ const Login = () => {
     if (!email || !password) {
       return handleError("email and password are required");
     }
-    const url = "http://localhost:8080/auth/login";
+    const url = `${process.env.DOMAIN_API_URL}/auth/login`;
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -53,7 +53,7 @@ const Login = () => {
           navigate("/home");
         }, 1000);
       } else if (error) {
-        const details = error?.details[0].message;
+        const details = error[0].message;
         handleError(details);
       } else if (!success) {
         handleError(message);
